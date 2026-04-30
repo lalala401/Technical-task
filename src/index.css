@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-secondary: var(--secondary);
+  --color-secondary-forebraund: var(--secondary-forebgroud);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-test-red: red;
+}
+
+:root {
+  --radius: 0.63rem;
+  --background: oklch(92.66% 0.00649 16.382);
+  --foreground: oklch(0% 0 0 / 0.878);
+  --border: oklch(78.083% 0.15269 139.929 / 0.878);
+  --input: oklch(69.39% 0.20279 348.594 / 0.878);
+  --secondary: oklch(86.995% 0.0001 271.152 / 0.878);
+  /* --secondary-forebgroud: oklch(100% 0.00011 271.152 / 0.878); */
+
+  --accent: oklch(90.431% 0.08384 169.187 / 0.878);
+  --accent-foreground: oklch(0% 0 0 / 0.878);
+  --accent-secondary: oklch(80.715% 0.10511 168.025 / 0.878);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
